@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/javascripts/script.js"></script>
+    <title><%= title %></title>
+
+</head>
+<body>
+<%include Template/Header.ejs %>
+    <div class = "container">
+
+            <h2>Sign Up</h2>
+            <form class="form-horizontal" role="form" action = "/signup" method = "post">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="id">ID:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="idr" name = "f1" placeholder="Enter ID">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="age">Age:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="age" name = "f2" placeholder="Enter Age">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="first">First Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="first" name = "f3" placeholder="Enter First Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="last">Last Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="last" name = "f4" placeholder="Enter Last name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+
+<% include Template/Footer.ejs %>
+</body>
+</html>

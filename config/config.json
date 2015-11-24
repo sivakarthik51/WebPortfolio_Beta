@@ -1,0 +1,25 @@
+{
+  "development": {
+    "username": "root",
+    "password": "",
+    "database": "emp",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "freezeTableName":true
+
+  },
+  "test": {
+    "username": "root",
+    "password": "",
+    "database": "emp",
+    "host": "127.0.0.1:3000",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "",
+    "database": "emp",
+    "host": "127.0.0.1:3000",
+    "dialect": "mysql"
+  }
+}

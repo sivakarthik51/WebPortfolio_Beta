@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Siva Karthik</title>
+    <script type="text/javascript">
+
+        $(window).load(function() {
+
+            var i =0;
+
+            var images = ['./images/Bg_1.jpg','./images/Bg_2.jpg','./images/Bg_3.jpg'];
+
+            var image = $('#slideit');
+
+            //Initial Background image setup
+
+            image.css('background-image', 'url(./images/Bg_1.jpg)');
+
+            //Change image at regular intervals
+
+            setInterval(function(){
+
+                image.fadeOut(1000, function () {
+
+                    image.css('background-image', 'url(' + images [i++] +')');
+
+                    image.fadeIn(1000);
+
+                });
+
+                if(i == images.length)
+
+                i = 0;
+
+            }, 5000);
+            $('#slideit').hover(function(){
+                $('#slideit').animate({opacity:1.0,height:600},"slow" );
+
+            });
+            $('#slideit').mouseout(function(){
+                $('#slideit').animate({opacity:0.4,height:300},"slow" );
+
+            });
+        });
+
+    </script>
+</head>
+<body>
+<% include Template/Header.ejs %>
+
+    <div id="slideit" style="height:600px;background-size:cover">
+
+    </div>
+
+<div class = "container">
+    <h2>Welcome to my site</h1>
+        <p class = "lead"> So this is my site Still Majorly under construction</p>
+</div>
+
+<% include Template/Footer.ejs %>
+</body>
+</html>

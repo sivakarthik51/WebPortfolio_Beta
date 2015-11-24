@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("p").hover(function(){
+                var p = $("p");
+                p.animate({fontSize: '3em'}, "slow");
+            });
+            $("p").mouseout(function(){
+                var p = $("p");
+                p.animate({fontSize: '1em'}, "slow");
+            });
+
+        });
+    </script>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Siva Karthik</title>
+</head>
+<body>
+<% include Template/Header.ejs %>
+<div class = "container" id = "main">
+    <p>Java is a set of several computer software and specifications developed by Sun Microsystems, later acquired by Oracle Corporation, that provides a system for developing application software and deploying it in a cross-platform computing environment. Java is used in a wide variety of computing platforms from embedded devices and mobile phones to enterprise servers and supercomputers. While less common, Java applets run in secure, sandboxed environments to provide many features of native applications and can be embedded in HTML pages.
+
+    Writing in the Java programming language is the primary way to produce code that will be deployed as byte code in a Java Virtual Machine (JVM); byte code compilers are also available for other languages, including Ada, JavaScript, Python, and Ruby. In addition, several languages have been designed to run natively on the JVM, including Scala, Clojure and Groovy. Java syntax borrows heavily from C and C++, but object-oriented features are modeled after Smalltalk and Objective-C.[11] Java eschews certain low-level constructs such as pointers and has a very simple memory model where every object is allocated on the heap and all variables of object types are references. Memory management is handled through integrated automatic garbage collection performed by the JVM.
+
+    On November 13, 2006, Sun Microsystems made the bulk of its implementation of Java available under the GNU General Public License (GPL).[12][13]The Java platform is a suite of programs that facilitate developing and running programs written in the Java programming language. The platform is not specific to any one processor or operating system, rather an execution engine (called a virtual machine) and a compiler with a set of libraries are implemented for various hardware and operating systems so that Java programs can run identically on all of them. There are multiple platforms, each targeting a different class of devices:</p>
+    <blockquote>Java: write once, run away!
+        <footer>--Brucee</footer></blockquote>
+</div>
+<div class="container" id = "gmail"></div>
+<% include Template/Footer.ejs %>
+</body>
+</html>

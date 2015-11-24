@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/javascripts/script.js"></script>
+    <title><%= title %></title>
+
+  </head>
+  <body>
+  <%include Template/Header.ejs %>
+  <div class="container">
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p><h3><form method="post" action = "/users">ID:<input type="number" name = "idinp"  ></h3></form></p>
+  </div>
+  <div class="container">
+    <h2>Current Users</h2>
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Age</th>
+        <th>First</th>
+        <th>Last</th>
+
+      </tr>
+      </thead>
+      <tbody>
+
+        <%if(datw) datw.forEach(function(temp){%>
+      <tr>
+        <th><%=temp.id%></th>
+        <th><%=temp.age%></th>
+        <th><%=temp.first%></th>
+        <th><%=temp.last%></th>
+      </tr>
+
+      <%});%>
+      </tr>
+
+
+      </tbody>
+    </table>
+  </div>
+
+  <% include Template/Footer.ejs %>
+  </body>
+</html>
